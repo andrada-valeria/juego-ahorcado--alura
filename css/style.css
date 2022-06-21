@@ -1,6 +1,8 @@
+
 body{
     background: url("../img/pizarra.jpg") no-repeat;
 }
+
 @media screen and (min-width:1024px) {
 
 body{
@@ -11,6 +13,7 @@ body{
 #box-juego{
 display: flex;
 }*/
+
 
 .juego{
   display: block;
@@ -38,8 +41,8 @@ p{
     height: 300px;
 }
 
-#teclResponsive{
-    visibility: hidden;
+#teclaResponsive{
+    opacity: 0%;
 }
 
 #pizarra{

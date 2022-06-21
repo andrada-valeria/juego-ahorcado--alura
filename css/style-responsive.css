@@ -3,9 +3,9 @@ body{
         background: url("../img/pizarra.jpg") no-repeat;
         justify-content: center;
  }
- #teclResponsive{
-     visibility: hidden;
- }
+ #teclaResponsive{
+    opacity: 0%;
+}
 #box-controles{
     display:block;
 }

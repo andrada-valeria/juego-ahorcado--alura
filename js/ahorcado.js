@@ -18,6 +18,10 @@ palabrasSecretasAlmacenadas = JSON.parse(localStorage.getItem("palabrasSecretas"
 
 
 
+function showChar(e){
+
+}
+
 /* variables globales */
 tamanhoArreglo = palabrasSecretas.length - 1;
 numeroAleatorio = Math.round(Math.random()*tamanhoArreglo);
