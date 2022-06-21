@@ -1,4 +1,11 @@
 @media (max-width:660px) {
+body{
+        background: url("https://static.vecteezy.com/system/resources/previews/004/703/663/non_2x/black-background-blackboard-grunge-texture-chalkboard-background-chalk-board-chalk-rubbed-out-on-blackboard-texture-for-add-text-or-graphic-design-education-concept-free-photo.jpg") no-repeat;
+        justify-content: center;
+ }
+ #teclResponsive{
+     visibility: hidden;
+ }
 #box-controles{
     display:block;
 }
@@ -8,17 +15,48 @@
 #box-agregar-palabra{
     display: block;
 }
+
+/*letras*/
+#inicio{
+    display: inline-block;
+}
+h1{
+    font-family: monospace;
+    border-radius: 2.5px solid green;
+    animation: cursor .5s infinite,
+    inicio 3.5s steps(30,end);
+    white-space:nowrap;
+    overflow: hidden;
+    color: #f1f0e8;
+}
+p{
+    font-family: monospace;
+    border-radius: 2.5px solid green;
+    animation: cursor .5s infinite,
+    inicio 3.5s steps(50,end);
+    white-space:nowrap;
+    overflow: hidden;  
+    color: #f1f0e8; 
+}
+@keyframes cursor{
+0% { border-color: transparent;}
+50%{border-color: green;}
+
+}
+
+@keyframes inicio{
+    from{width: 0 }
+to{width: 100%}
+}
+
 #myImg2{
-  opacity: 100%;  
-  visibility: visible;
+
+    visibility: hidden;
+  
+    height: 300px;
 
 }
+footer{
+    background-color: black ;
 }
-@media screen and (min-width:1024px) {
-
-    #myImg2{
-        visibility: hidden;
-        opacity:0%;
-        height: 300px;
-    }
 }

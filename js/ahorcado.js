@@ -2,8 +2,9 @@ var btnNuevaPalabra = document.getElementById("nueva_palabra");
 eventoTecla = document.addEventListener("keydown", letraEscritas);
 var pantalla = document.querySelector("canvas");
 var pincel = pantalla.getContext("2d");
+/*
 var popupContainer = document.getElementById("popup-container");
-var btnPopup = document.getElementById("btn-popup");
+var btnPopup = document.getElementById("btn-popup");*/
 var btnMeRindo = document.getElementById("me_rindo");
 var letrasColor= "white";
 
@@ -143,9 +144,9 @@ function palabraCorrecta(l){
     /*GaNO GaNo*/
     if(puntos == palabraSeleccionada.length){
 
-        gano();
+      /*  gano();*/
        showGanador();
-             
+           alert("Felicidades, ganaste!");  
     }
 
 }
@@ -181,7 +182,7 @@ function dibujarHorca(){
 /* Cabeza */
     if(contadorHorca === 2){
         pincel.fillStyle = "#f1f0e8";
-        pincel.beginPath(); /* comenzar camino */
+        pincel.beginPath(); /* comienza camino */
         pincel.arc(150,110,30,0,2*3.14);
         pincel.fill();
     }
@@ -189,7 +190,7 @@ function dibujarHorca(){
     if(contadorHorca === 3){
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
-        pincel.beginPath(); /* comenzar camino */
+        pincel.beginPath(); /* comienza camino */
         pincel.moveTo(150, 110);
         pincel.lineTo(150,230);
         pincel.stroke();
@@ -207,7 +208,7 @@ function dibujarHorca(){
     if(contadorHorca === 5){
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
-        pincel.beginPath(); /* comenzar camino */
+        pincel.beginPath(); /* comienza camino */
         pincel.moveTo(150, 230);
         pincel.lineTo(170, 290);
         pincel.stroke();
@@ -216,7 +217,7 @@ function dibujarHorca(){
     if(contadorHorca === 6){
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
-        pincel.beginPath(); /* comenzar camino */
+        pincel.beginPath(); /* comenzo camino */
         pincel.moveTo(150, 140);
         pincel.lineTo(120, 190);
         pincel.stroke();
@@ -225,7 +226,7 @@ function dibujarHorca(){
     if(contadorHorca === 7){
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
-        pincel.beginPath(); /* comenzar camino */
+        pincel.beginPath(); /* inicio camino */
         pincel.moveTo(150, 140);
         pincel.lineTo(175, 190);
         pincel.stroke();
@@ -272,18 +273,20 @@ function Larendicion(){
 }
 
 /*Mostrar imagenes ocultas*/
+/*
 function showElem() {
     document.getElementById("myImg").style.visibility = "visible"; 
     alert(palabraSeleccionada);
   }
-
+*/
   function showGanador() {
     document.getElementById("myImg2").style.visibility = "visible"; 
   
    
 }
 
-  /*Funcion para dibujar en canvas ubicacion si gana */
+/*
+  /*Funcion para dibujar en canvas ubicacion si gana 
    function showImgCanvas(){
     pincel.drawImage(img, 50, 100);
-  }
+  }*/
