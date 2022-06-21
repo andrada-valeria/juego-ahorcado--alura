@@ -1,8 +1,8 @@
 
 @media screen and (min-width:1024px) {
 
-body,#box-juego{
-    background: url("https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg") no-repeat;
+body{
+    background: url("https://static.vecteezy.com/system/resources/previews/004/703/663/non_2x/black-background-blackboard-grunge-texture-chalkboard-background-chalk-board-chalk-rubbed-out-on-blackboard-texture-for-add-text-or-graphic-design-education-concept-free-photo.jpg") no-repeat ;
     justify-content: center;
 }
 /*
@@ -11,8 +11,8 @@ display: flex;
 }*/
 
 .juego{
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
   justify-content: center;
   align-items: center;
   padding: 100px;
@@ -29,15 +29,19 @@ display: flex;
 p{
     color: #f1f0e8; 
 }
+
 #myImg2{
     visibility: hidden;
-    opacity:0%;
+    
     height: 300px;
 }
 
-
+#teclResponsive{
+    visibility: hidden;
+}
 
 #pizarra{
     display: flex;
 }
+
 }
