@@ -1,5 +1,8 @@
+
+@media screen and (min-width:1024px) {
+
 body,#box-juego{
-    background: url("/img/blackboard.jpg") no-repeat;
+    background: url("https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg") no-repeat;
     justify-content: center;
 }
 /*
@@ -26,10 +29,15 @@ display: flex;
 p{
     color: #f1f0e8; 
 }
-
+#myImg2{
+    visibility: hidden;
+    opacity:0%;
+    height: 300px;
+}
 
 
 
 #pizarra{
     display: flex;
+}
 }
