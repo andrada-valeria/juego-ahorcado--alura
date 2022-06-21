@@ -1,0 +1,35 @@
+body,#box-juego{
+    background: url("/img/blackboard.jpg") no-repeat;
+    justify-content: center;
+}
+/*
+#box-juego{
+display: flex;
+}*/
+
+.juego{
+    display: block;
+    text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+#btn-nueva-palabra{
+    display: inline-block;
+}
+#box-controles{
+    display: flex;
+}
+#box-agregar-palabra{
+    display: flex;
+}
+p{
+    color: #f1f0e8; 
+}
+
+
+
+
+#pizarra{
+    display: flex;
+}

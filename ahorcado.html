@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style-letra.css">
+    <link rel="stylesheet" href="css/style-span.css">
+    <link rel="stylesheet" href="css/style-btn.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+
+    <title>Ahorcado</title>
+</head>
+
+<body>
+
+
+    <div id="box-juego">
+
+        <div id="box-controles">
+            <div>
+                <button id="nueva_palabra" data-text="Awesome" class="button"> <span
+                        class="actual-text">&nbsp;Jugar&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;Jugar&nbsp;</span> </button>
+            </div>
+
+            <div>
+
+                <button id="me_rindo" data-text="Awesome" class="button"> <span
+                        class="actual-text">&nbsp;Rendirse&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;Rendirse&nbsp;</span> </button>
+            </div>
+
+
+
+
+            <div id="box-agregar-palabra">
+                <div>
+                    <p>Agrega una nueva palabra para jugar</p>
+                </div>
+                <div>
+
+                    <input type="text" id="nueva-palabra" minlength="3" maxlength="6">
+                </div>
+
+                <div>
+                    <button id="btn-nueva-palabra" data-text="Awesome" class="button">
+                        <span class="actual-text">&nbsp;Agregar&nbsp;</span>
+                        <span class="hover-text" aria-hidden="true">&nbsp;Agregar&nbsp;</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="pizarra">
+            <div id="box-canva">
+                <canvas height="480" width="300" id="canvas"></canvas>
+
+
+            </div>
+            <img id="myImg2" class="myImg2" src="img/contente.gif" alt="">
+         <!--
+ <img id="myImg" class="myImg" src="img/unnamed.png" alt="">
+
+
+            
+
+         -->
+           
+
+
+        </div>
+
+
+    </div>
+
+    <!--Footer -->
+
+    <footer style="text-align: center;padding: 5px;">
+
+        <p class="m-0 text-center text-white small">Copyright &copy; Valeria Fernanda Andrada - 2022</p>
+    </footer>
+    <script src="js/ahorcado.js"></script>
+
+    <script src="js/nueva-palabra.js"></script>
+</body>
+
+</html>

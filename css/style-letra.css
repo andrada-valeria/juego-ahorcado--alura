@@ -1,0 +1,36 @@
+#inicio{
+    display: inline-block;
+}
+h1{
+    font-family: monospace;
+    border-radius: 2.5px solid green;
+    animation: cursor .5s infinite,
+    inicio 3.5s steps(30,end);
+    white-space:nowrap;
+    overflow: hidden;
+    color: #f1f0e8;
+}
+p{
+    font-family: monospace;
+    border-radius: 2.5px solid green;
+    animation: cursor .5s infinite,
+    inicio 3.5s steps(50,end);
+    white-space:nowrap;
+    overflow: hidden;  
+    color: #f1f0e8; 
+}
+@keyframes cursor{
+0% { border-color: transparent;}
+50%{border-color: green;}
+
+}
+
+@keyframes inicio{
+    from{width: 0 }
+to{width: 100%}
+}
+
+#iniciar-juego{
+    text-align: center;
+    padding: 40px 50px;
+}

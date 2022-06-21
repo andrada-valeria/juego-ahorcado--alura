@@ -1,0 +1,24 @@
+@media (max-width:660px) {
+#box-controles{
+    display:block;
+}
+#box-canva{
+    display: flex;
+}
+#box-agregar-palabra{
+    display: block;
+}
+#myImg2{
+  opacity: 100%;  
+  visibility: visible;
+
+}
+}
+@media screen and (min-width:1024px) {
+
+    #myImg2{
+        visibility: hidden;
+        opacity:0%;
+        height: 300px;
+    }
+}
