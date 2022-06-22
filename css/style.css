@@ -1,12 +1,7 @@
 
-body{
-    background: url("/img/pizarra.jpg") no-repeat;
-}
-
-@media screen and (min-width:1024px) {
-
-body{
-    background: url("/img/pizarra.jpg") no-repeat;
+body,#box-juego{
+    background: url("../img/pizarra.jpg") no-repeat;
+  
     justify-content: center;
 }
 /*
@@ -28,6 +23,7 @@ display: flex;
 #box-controles{
     display: flex;
 }
+
 #myImg2{
    display: none;
    height: 300px;
@@ -44,4 +40,3 @@ p{
 }
 
 
-}
