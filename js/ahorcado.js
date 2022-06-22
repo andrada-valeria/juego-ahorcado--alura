@@ -1,5 +1,6 @@
 var btnNuevaPalabra = document.getElementById("nueva_palabra");
 eventoTecla = document.addEventListener("keydown", letraEscritas);
+
 var pantalla = document.querySelector("canvas");
 var pincel = pantalla.getContext("2d");
 /*
@@ -8,6 +9,13 @@ var btnPopup = document.getElementById("btn-popup");*/
 var btnMeRindo = document.getElementById("me_rindo");
 var letrasColor= "white";
 
+/*audio*/
+const audioGano = new Audio("../sound/gano.mp3");
+const audioPerdio = new Audio("../sound/perdio.mp3");
+const audioError= new Audio("../sound/error.mp3");
+const audioAcerto = new Audio("../sound/acierto.mp3");
+
+
 
 
 /* Local storage */
@@ -15,6 +23,8 @@ palabrasSecretas = ["ALURA", "BORDE", "AZUL", "GRIS", "SABIO", "AUTO", "VACIO", 
 "ASTRO", "HIELO", "SABOR", "OSO","TAMBOR","ZAPATO"];
 localStorage.setItem("palabrasSecretas", JSON.stringify(palabrasSecretas)); 
 palabrasSecretasAlmacenadas = JSON.parse(localStorage.getItem("palabrasSecretas"));
+
+
 
 
 
@@ -103,31 +113,39 @@ function palabraCorrecta(l){
         if(l === palabraSeleccionada[i]){
             var esLetra = true;
             if (i === 0){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 30);
                 puntos = puntos + 1;            
             } 
             if (i === 1){
+                audioAcerto.play();
+
                 dibujarLetra(palabraSeleccionada[i], 60);
                 puntos = puntos + 1;    
             } 
             if (i === 2){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 90);
                 puntos = puntos + 1;    
             } 
             if (i === 3){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 120);
                 puntos = puntos + 1;    
             } 
             if (i === 4){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 150);
                 puntos = puntos + 1;    
             } 
             if (i === 5){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 180);
                 puntos = puntos + 1;    
             } 
 
             if (i === 6){
+                audioAcerto.play();
                 dibujarLetra(palabraSeleccionada[i], 210);
                 puntos = puntos + 1;    
             } 
@@ -142,9 +160,10 @@ function palabraCorrecta(l){
     console.log(puntos);
     console.log(palabraSeleccionada);
     /*GaNO GaNo*/
+    
     if(puntos == palabraSeleccionada.length){
-
-      /*  gano();*/
+        audioGano.play();
+     /*  gano();*/
        showGanador();
            alert("Felicidades, ganaste!");  
     }
@@ -159,7 +178,7 @@ function palabraIncorrecta(l){
     dibujarHorca();
 }
 
-/* Funcion que dibuja la horca cada vez que no acertan una letra */
+/* Funcion que dibuja la horca  */
 function dibujarHorca(){
 
     contadorHorca = contadorHorca + 1;
@@ -167,7 +186,8 @@ function dibujarHorca(){
 /* Horca */
 
     if (contadorHorca === 1){
-      
+      audioError.play();
+   
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* comenzar camino */
@@ -181,6 +201,7 @@ function dibujarHorca(){
     } 
 /* Cabeza */
     if(contadorHorca === 2){
+        audioError.play();
         pincel.fillStyle = "#f1f0e8";
         pincel.beginPath(); /* comienza camino */
         pincel.arc(150,110,30,0,2*3.14);
@@ -188,6 +209,7 @@ function dibujarHorca(){
     }
 /* Tronco */
     if(contadorHorca === 3){
+        audioError.play();
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* comienza camino */
@@ -197,6 +219,7 @@ function dibujarHorca(){
     }
 /* Pierna izquierda */
     if(contadorHorca === 4){
+        audioError.play();
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* comenzar camino */
@@ -206,6 +229,7 @@ function dibujarHorca(){
     }
 /* Pierna derecha */
     if(contadorHorca === 5){
+        audioError.play();
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* comienza camino */
@@ -215,6 +239,7 @@ function dibujarHorca(){
     }
 /* Brazo izquierdo */
     if(contadorHorca === 6){
+        audioError.play();
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* comenzo camino */
@@ -224,6 +249,7 @@ function dibujarHorca(){
     }
 /* Brazo derecho */
     if(contadorHorca === 7){
+        audioPerdio.play();
         pincel.strokeStyle = "#f1f0e8";
         pincel.lineWidth = 2;
         pincel.beginPath(); /* inicio camino */
@@ -234,10 +260,9 @@ function dibujarHorca(){
 
       perdio();
       
-        /*        
-        showElem();
+   
         alert("No pudiste salvar a Juancito");
-       palabraCorrecta();*/
+       
     }
 }
 
@@ -249,7 +274,7 @@ function perdio(){
         pincel.drawImage(imgPierde, 92,42);
       }
 }
-
+/*
 function gano(){
     var imgGana = new Image();
     imgGana.src = "img/contente.gif";
@@ -259,33 +284,33 @@ function gano(){
       }
 }
 
-
+*/
 function Larendicion(){
 
     for (var i = 0; i<=7; i++){
         setTimeout(function(){dibujarHorca()},500);
   
     }
-
-
+    audioPerdio.play();
+perdio();
     alert("Perdiste");
    
 }
 
-/*Mostrar imagenes ocultas*/
-/*
+/*Mostrar imagenes ocultas
 function showElem() {
     document.getElementById("myImg").style.visibility = "visible"; 
     alert(palabraSeleccionada);
   }
 */
+
   function showGanador() {
-    document.getElementById("myImg2").style.visibility = "visible"; 
+    document.getElementById("myImg2").style.display= "flex"; 
   
    
 }
 
-/*
+
   /*Funcion para dibujar en canvas ubicacion si gana 
    function showImgCanvas(){
     pincel.drawImage(img, 50, 100);
