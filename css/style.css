@@ -1,12 +1,12 @@
 
 body{
-    background: url("../img/pizarra.jpg") no-repeat;
+    background: url("/img/pizarra.jpg") no-repeat;
 }
 
 @media screen and (min-width:1024px) {
 
 body{
-    background: url("../img/pizarra.jpg") no-repeat;
+    background: url("/img/pizarra.jpg") no-repeat;
     justify-content: center;
 }
 /*
@@ -28,6 +28,10 @@ display: flex;
 #box-controles{
     display: flex;
 }
+#myImg2{
+   display: none;
+   height: 300px;
+}
 #box-agregar-palabra{
     display: flex;
 }
@@ -35,18 +39,9 @@ p{
     color: #f1f0e8; 
 }
 
-#myImg2{
-    visibility: hidden;
-    
-    height: 300px;
-}
-
-#teclaResponsive{
-    opacity: 0%;
-}
-
 #pizarra{
     display: flex;
 }
+
 
 }
