@@ -1,7 +1,7 @@
 
-
-body{
- background: url("../img/pizarra_verde.png") no-repeat;
+body,#box-juego{
+background: url("../img/pizarra_verde.png") no-repeat;
+  
     justify-content: center;
 }
 /*
@@ -23,6 +23,7 @@ display: flex;
 #box-controles{
     display: flex;
 }
+
 #myImg2{
    display: none;
    height: 300px;
