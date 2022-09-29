@@ -1,6 +1,6 @@
 
 body,#box-juego{
-background: url("../img/pizarra_verde.png") no-repeat;
+background-image: url("../img/pizarra_verde.png") no-repeat;
   
     justify-content: center;
 }
